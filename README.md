@@ -5,6 +5,13 @@ This is a custom plugin i have created for fetching your provider's monthly ener
 # Version
 The latest version is 1.1.0
 
+# Install via HACS
+- Go to Hacs
+- Custom Repositories
+- Add "https://github.com/TeDeVPrime/energy_grabber_by_ted"
+- Search for the Energy Grabber by Ted - EGT
+- Download and go to step 11
+
 # How to install via Download
 - Press the Download at the top....
 - Unzip and delete the "master" from the folder name
