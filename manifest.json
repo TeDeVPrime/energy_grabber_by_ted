@@ -5,7 +5,7 @@
   "requirements": ["beautifulsoup4", "requests"],
   "dependencies": [],
   "codeowners": ["@TeDeVPrime"],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This custom integration fetches the latest energy prices from specified Greek energy providers and presents them as sensors in Home Assistant.",
   "issue_tracker": "https://github.com/TeDeVPrime/energy_grabber_by_ted/issues",
   "icon": "mdi:flash",

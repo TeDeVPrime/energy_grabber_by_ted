@@ -1,5 +1,5 @@
 import logging
-from datetime import timedelta
+from datetime import timedelta, datetime
 from bs4 import BeautifulSoup
 from homeassistant.components.sensor import SensorEntity
 from homeassistant.core import callback
@@ -43,6 +43,7 @@ class EnergyPriceSensor(SensorEntity):
         self._name = name
         self.coordinator = coordinator
         self._entry_id = entry_id
+        
 
     @property
     def unique_id(self):
@@ -59,10 +60,27 @@ class EnergyPriceSensor(SensorEntity):
         """Return the state of the sensor."""
         return self.coordinator.data
 
+    
+    @property
+    def unit_of_measurement(self):
+        """Return the unit of measurement."""
+        return "EUR/kWh"
+
+
     @property
     def available(self):
         """Return if sensor is available."""
         return self.coordinator.last_update_success
+
+    @property
+    def state_class(self):
+        """Return the state class of the sensor."""
+        return 'measurement'
+
+    @property
+    def icon(self):
+        """Return the icon to be used for this sensor."""
+        return "mdi:currency-eur"
 
     async def async_update(self):
         """Update the sensor."""
